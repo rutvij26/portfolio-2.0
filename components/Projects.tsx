@@ -29,6 +29,7 @@ function Projects({}: Props) {
                         transition={{ duration: 1.2 }}
                         whileInView={{ opacity: 1, y: 0}}
                         viewport={{once: true}}
+                        className='w-64 h-64 xl:w-[500px] xl:h-[500px] object-cover object-center'
                         src="https://www.svgrepo.com/show/374144/typescript.svg" alt="" 
                     />
 
@@ -40,7 +41,7 @@ function Projects({}: Props) {
                             {" "}{i+1}
                         </h4>
 
-                        <p className='text-lg text-center md:text-left'>
+                        <p className='text-lg md:text-justify text-left xl:text-justify' >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </p>
 
