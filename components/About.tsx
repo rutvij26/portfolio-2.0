@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { PageInfo } from '@/typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-function About({ }: Props) {
+function About({ pageInfo }: Props) {
     return (
         <motion.div
             initial={{ opacity: 0}}
@@ -23,7 +27,7 @@ function About({ }: Props) {
                 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                src="https://i.imgur.com/44hhaBT.jpeg"
+                src={urlFor(pageInfo?.profilePic).url()}
                 className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 
     md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] "
             />
@@ -32,8 +36,8 @@ function About({ }: Props) {
                 <span className='underline decoration-[#F7AB0A]/50'>little</span> {" "}
                 background</h4>
                 <p className='text-base'>
-                    Dedicated and efficient full-stack developer with hands-on professional experience in application layers, presentation layers, and databases. 
-                    Experienced in both F/E and B/E technologies stacks. Seeking to leverage development experience and hands-on technical expertise in a challenging role as a Full-stack Developer.</p>
+                {pageInfo?.backgroundInformation}
+                </p>
             </div>
         </motion.div>
     )
