@@ -27,29 +27,29 @@ function ContactMe({ }: Props) {
 	};
   
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left 
+    <div className="h-screen flex relative flex-col text-center
     xl:flex-row max-w-7xl xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
-        <h4 className='text-4xl font-semibold text-center'> {text}
+      <div className="flex flex-col space-y-7 md:space-y-10 lg:space-y-10 xl:space-y-10">
+        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold pt-10 text-center'> {text}
 		<Cursor cursorColor='#F7AB0A' />
         </h4>
-        <div className='space-y-10'>
-			<div className="flex items-center space-x-5 justify-center">
+        <div className='space-y-7 md:space-y-10 lg:space-y-10 xl:space-y-10'>
+			<div className="flex items-center md:space-x-3 lg:space-x-5 xl:space-x-5 justify-center">
 				<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse"/>
-				<p className='text-xl'>+1 (905) 782-5025</p>
+				<p className='text-3sm md:text-xl lg:text-xl xl:text-xl'>+1 (905) 782-5025</p>
 			</div>
 
-			<div className="flex items-center space-x-5 justify-center">
+			<div className="flex items-center md:space-x-3 lg:space-x-5 xl:space-x-5 justify-center">
 				<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse"/>
-				<p className='text-xl'>rut26sathe@gmail.com</p>
+				<p className='text-3sm md:text-xl lg:text-xl xl:text-xl'>rut26sathe@gmail.com</p>
 			</div>
 
-			<div className="flex items-center space-x-5 justify-center">
+			<div className="flex items-center md:space-x-3 lg:space-x-5 xl:space-x-5 justify-center">
 				<MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse"/>
-				<p className='text-xl'>Toronto</p>
+				<p className='text-3sm md:text-xl lg:text-xl xl:text-xl'>Toronto</p>
 			</div>
 
 			<form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>

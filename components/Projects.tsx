@@ -13,17 +13,17 @@ function Projects({projects}: Props) {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5 }}
-    className='h-screen relative flex overflow-hidden flex-col text-left
+    className='h-screen relative flex overflow-hidden flex-col text-center
     md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
             Projects
         </h3>
 
         <div className="relative w-full flex 
-        overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]">
+        overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]">
             {projects?.map((project, i) => (
                 <div key={i+1} className="w-screen flex-shrink-0 snap-center flex flex-col
-                space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+                space-y-5 items-center justify-center p-20 md:p-44 h-screen mx-auto">
                     <motion.img 
                         initial={{
                             y: -300,
@@ -32,12 +32,12 @@ function Projects({projects}: Props) {
                         transition={{ duration: 1.2 }}
                         whileInView={{ opacity: 1, y: 0}}
                         viewport={{once: true}}
-                        className='w-64 h-64 xl:w-[500px] xl:h-[500px] object-cover object-center'
+                        className='w-52 h-52 sm:w-60 sm:h-60 md:w-60 md:h-60 lg:w-60 lg:h-60 xl:w-[400px] xl:h-[400px] object-cover object-center'
                         src={urlFor(project?.image).url()} alt="" 
                     />
 
                     <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                        <h4 className="text-4xl font-semibold text-center">
+                        <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold text-center">
                             <span className='underline decoration-[#F7AB0A]/50'>
                                 <a href={project?.linkToBuild}>
                                 {project?.title}
@@ -49,14 +49,14 @@ function Projects({projects}: Props) {
 
                         { project?.technologies.map(tech => (
                             <img 
-                            className="h-7 w-7 "
+                            className="h-7 w-7 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-12 xl:w-12"
                             key={tech._id} 
                             src={urlFor(tech.image).url()} 
                             alt=""></img>
                             ))}
                         </div>
                         
-                        <p className='text-lg md:text-justify text-left xl:text-justify' >
+                        <p className='text-sm text-justify md:text-md lg:text-lg xl:text-xl' >
                         {project?.summary}
                         </p>
 
