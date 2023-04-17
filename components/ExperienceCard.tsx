@@ -24,7 +24,7 @@ function ExperienceCard({experience}: Props) {
         src={urlFor(experience?.companyImage).url()} 
         alt="" />
 
-        <div className="px-0 md:px-10">
+        <div className="px-8 md:px-10 lg:px-10 xl:px-10">
             <h4 className='text-xl md:text-2xl lg:text-3xl xl:text-3xl font-light'>{experience?.jobTitle}</h4>
             <p className="font-bold text-sm md:text-lg lg:text-xl xl:text-xl mt-1">{experience?.company}</p>
             <div className="flex space-x-2 my-2">
