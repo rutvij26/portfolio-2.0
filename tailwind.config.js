@@ -8,6 +8,35 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+
+          "primary": "#3399FF",
+
+          "secondary": "#FF9700",
+
+          "accent": "#66635B",
+
+          "neutral": "#191D24",
+
+          "base-100": "#f5f5f4",
+
+          "info": "#0F89FF",
+
+          "success": "#36D399",
+
+          "warning": "#FBBD23",
+
+          "error": "#F87272",
+        },
+      },
+    ],
+  },
+  plugins: [
+    require('tailwind-scrollbar'),
+    require("daisyui")
+  ],
 }
 
