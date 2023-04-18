@@ -16,7 +16,7 @@ function About({ pageInfo }: Props) {
             className='flex flex-col relative h-screen
     text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-acccent text-2xl'>About</h3>
             <motion.img
                 initial={{
                     x: -200,
@@ -33,12 +33,13 @@ function About({ pageInfo }: Props) {
             />
             <div className="space-y-10 px-0 md:px-10">
                 <h4 className='text-4xl font-semibold'>Here is a {" "}
-                <span className='underline decoration-[#F7AB0A]/50'>little</span> {" "}
+                <span className='underline decoration-secondary'>little</span> {" "}
                 background</h4>
-                <p className='text-base'>
+                <p className='text-accent'>
                 {pageInfo?.backgroundInformation}
                 </p>
             </div>
+        <div className="w-full absolute top-[30%] bg-secondary/10 left-0 h-[400px] md:h-[500px] skew-y-12" />
         </motion.div>
     )
 }

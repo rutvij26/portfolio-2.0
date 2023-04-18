@@ -9,9 +9,9 @@ type Props = {
 
 function ExperienceCard({experience}: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    h-[550px] w-[400px] sm:h-[650px] sm:w-[400px] md:h-[650px] md:w-[500px] lg:h-[650px] lg:w-[500px] xl:h-[650px] xl:w-[500px] snap-center bg-[#292929] p-10
-    hover:opacity-100 opacity-80 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex bg-base-100/60 flex-col rounded-lg items-center space-y-7 flex-shrink-0 border border-primary
+    h-[550px] w-[129%] sm:h-[650px] sm:w-[400px] md:h-[650px] md:w-[500px] lg:h-[650px] lg:w-[500px] xl:h-[650px] xl:w-[500px] snap-center bg-base-100 p-4 md:p-10
+    cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img 
         initial={{
             y: 100,
@@ -40,12 +40,12 @@ function ExperienceCard({experience}: Props) {
                 }
                 
             </div>
-            <p className='uppercase text-sm md:text-md lg:text-lg xl:text-lg py-5 text-gray-300'>
+            <p className='uppercase text-sm md:text-md lg:text-lg xl:text-lg py-5 text-secondary'>
                 {new Date(experience?.dateStarted).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
                 - 
                 {experience?.isCurrentlyWorkingHere ? "Present" : new Date(experience?.dateEnded).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
             </p>
-            <ul className='list-disc space-y-2 ml-5 pr-2 text-left text-xs md:text-sm lg:text-sm xl:text-md h-60 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]'>
+            <ul className='list text-accent space-y-2 ml-5 pr-2 text-left text-xs md:text-sm lg:text-sm xl:text-md h-60 overflow-y-scroll scrollbar-thin scrollbar-track-primary scrollbar-thumb-secondary'>
                 {
                     experience?.points.map((point, i) => (
                         <li key={i}>{point}</li>
