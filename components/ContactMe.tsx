@@ -32,7 +32,7 @@ function ContactMe({ }: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-7 md:space-y-10 lg:space-y-10 xl:space-y-10">
+      <div className="flex flex-col space-y-7 md:space-y-10 lg:space-y-10 xl:space-y-10 z-20">
         <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold pt-10 text-center'> {text}
 		<Cursor cursorColor='#F7AB0A' />
         </h4>
@@ -64,6 +64,7 @@ function ContactMe({ }: Props) {
 			</form>
         </div>
       </div>
+	  <div className="w-full z-0 absolute top-[30%] bg-secondary/10 left-0 h-[400px] md:h-[500px] xl:h-[600px] skew-y-12" />
     </div>
   )
 }

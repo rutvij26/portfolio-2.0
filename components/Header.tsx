@@ -3,10 +3,14 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '@/typings';
+import tailwindConfig from '../tailwind.config';
 
 interface HeaderProps {
     socials: Social[]
 }
+
+
+const fgColor = tailwindConfig.daisyui?.themes[0]['mytheme'].accent;
 
 /**
  * Header of the portfolio
@@ -35,7 +39,7 @@ const Header = ({ socials }: HeaderProps): JSX.Element => {
                         <SocialIcon
                         key={social._id}
                         url={social.url}
-                        fgColor='gray'
+                        fgColor={fgColor}
                         bgColor='transparent'
                     /> 
                     ))
@@ -61,7 +65,7 @@ const Header = ({ socials }: HeaderProps): JSX.Element => {
                 <SocialIcon
                     className='cursor-pointer'
                     network='email'
-                    fgColor='gray'
+                    fgColor={fgColor}
                     bgColor='transparent'
                 />
                 <Link href="#contact">

@@ -15,12 +15,12 @@ function Projects({projects}: Props) {
     transition={{ duration: 1.5 }}
     className='h-screen relative flex overflow-hidden flex-col text-center
     md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h3 className='absolute top-24 uppercase tracking-[20px] text-accent text-2xl'>
             Projects
         </h3>
 
         <div className="relative w-full flex 
-        overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]">
+        overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-primary/20 scrollbar-thumb-secondary">
             {projects?.map((project, i) => (
                 <div key={i+1} className="w-screen flex-shrink-0 snap-center flex flex-col
                 space-y-5 items-center justify-center p-20 md:p-44 h-screen mx-auto">
@@ -37,8 +37,8 @@ function Projects({projects}: Props) {
                     />
 
                     <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                        <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold text-center">
-                            <span className='underline decoration-[#F7AB0A]/50'>
+                        <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-accent font-semibold text-center">
+                            <span className='underline decoration-secondary/50 text-accent'>
                                 <a href={project?.linkToBuild}>
                                 {project?.title}
                                 </a>
@@ -56,7 +56,7 @@ function Projects({projects}: Props) {
                             ))}
                         </div>
                         
-                        <p className='text-sm text-justify md:text-md lg:text-lg xl:text-xl' >
+                        <p className='text-sm text-justify md:text-md lg:text-lg xl:text-xl text-accent' >
                         {project?.summary}
                         </p>
 
@@ -65,8 +65,7 @@ function Projects({projects}: Props) {
             ))}
         </div>
 
-        <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px]
-        -skew-y-12" />
+        <div className="w-full absolute top-[30%] bg-primary/10 left-0 h-[400px] md:h-[500px] -skew-y-12" />
     </motion.div>
   )
 }
