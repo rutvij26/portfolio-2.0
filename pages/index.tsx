@@ -16,6 +16,7 @@ import { fetchSkills } from '@/utils/fetchSkills';
 import { fetchProjects } from '@/utils/fetchProjects';
 import { fetchSocials } from '@/utils/fetchSocials';
 import { Analytics } from '@vercel/analytics/react';
+import { NextSeo } from 'next-seo';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +35,11 @@ export default function Home({ pageInfo,
   socials }: Props) {
   return (
     <>
+    <NextSeo 
+      title="Rutvij's Portfolio"
+      description="Single page Portfolio of 'Rutvij Sathe (Full Stack Developer)' developed using NextJS, Sanity.io and Deployed on Vercel!"
+      canonical='https://rutvijsathe.dev'
+    />
     <div className='bg-base-100 text-accent 
     h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-primary scrollbar-thumb-secondary'>
       <Head>

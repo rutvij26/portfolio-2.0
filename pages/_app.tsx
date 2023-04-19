@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { useEffect } from 'react'
 import * as gtag from '../lib/gtag'
 import '@/styles/globals.css'
-
+import { DefaultSeo } from 'next-seo'
 
 const App = ({ Component, pageProps }: any) => {
   const router = useRouter()
@@ -38,6 +38,11 @@ const App = ({ Component, pageProps }: any) => {
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <DefaultSeo 
+        title="Rutvij's Portfolio"
+        description="Single page Portfolio of 'Rutvij Sathe (Full Stack Developer)' developed using NextJS, Sanity.io and Deployed on Vercel!"
+        canonical='https://rutvijsathe.dev'
       />
       <Component {...pageProps} />
     </>
