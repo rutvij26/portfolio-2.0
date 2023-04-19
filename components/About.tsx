@@ -2,12 +2,21 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { PageInfo } from '@/typings';
 import { urlFor } from '../sanity';
+import { useTypewriter } from 'react-simple-typewriter';
 
 type Props = {
     pageInfo: PageInfo
 }
 
 function About({ pageInfo }: Props) {
+    const [text, count] = useTypewriter({
+        words: [
+            "From Front-end dazzle to Back-end brilliance,",
+            "I bring a full spectrum of skills, to deliver top-notch Web solutions "
+        ],
+        loop: true,
+        delaySpeed: 1000
+    })
     return (
         <motion.div
             initial={{ opacity: 0}}
@@ -16,7 +25,7 @@ function About({ pageInfo }: Props) {
             className='flex flex-col relative h-screen
     text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-acccent text-2xl'>About</h3>
+            <h3 className='absolute top-24 uppercase tracking-[20px] font-sans text-acccent text-2xl'>About</h3>
             <motion.img
                 initial={{
                     x: -200,
@@ -32,9 +41,9 @@ function About({ pageInfo }: Props) {
     md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] "
             />
             <div className="space-y-10 px-0 md:px-10">
-                <h4 className='text-4xl font-semibold'>Here is a {" "}
-                <span className='underline decoration-secondary'>little</span> {" "}
-                background</h4>
+                <h4 className='text-4xl font-semibold'>
+                {text}
+                </h4>
                 <p className='text-accent'>
                 {pageInfo?.backgroundInformation}
                 </p>
