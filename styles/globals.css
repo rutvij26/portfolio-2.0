@@ -5,7 +5,8 @@
 @layer components {
     .heroButton {
         @apply btn px-6 py-2 mx-2 my-1 bg-base-100 border border-primary rounded-full uppercase text-xs
-        tracking-widest text-secondary transition-all
+        md:tracking-widest text-secondary transition-all
+
         hover:border-secondary/40 hover:text-primary
     }
 

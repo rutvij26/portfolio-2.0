@@ -11,6 +11,9 @@ module.exports = {
         sans: [
           "Montserrat"
         ]
+      },
+      screens: {
+        xl: '2560px'
       }
     },
   },
